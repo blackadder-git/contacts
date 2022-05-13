@@ -41,30 +41,7 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/contacts/{id}": {
-      "get": {
-        "description": "Query the database and return the contact with matching id",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/contacts/create": {
+      },
       "post": {
         "description": "Create a new contact",
         "produces": [
@@ -106,7 +83,26 @@
         }
       }
     },
-    "/contacts/update/{id}": {
+    "/contacts/{id}": {
+      "get": {
+        "description": "Query the database and return the contact with matching id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
       "put": {
         "description": "Use id to update an existing contact",
         "produces": [
@@ -152,9 +148,7 @@
             "description": "Internal Server Error"
           }
         }
-      }
-    },
-    "/contacts/delete/{id}": {
+      },
       "delete": {
         "description": "Use id to delete contact from the database",
         "produces": [
