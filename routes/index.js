@@ -8,8 +8,10 @@ router.use('/', require('./swagger')); // goto swagger.js
 router.use('/contacts', require('./contacts')); // goto contacts.js
 
 // home page
+/*
 router.get('/', (req, res) => {
     res.send('Ahoy, Madison!!');
 });
+*/
 
 module.exports = router;

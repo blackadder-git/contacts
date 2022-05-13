@@ -12,14 +12,9 @@ const mongodb = require('./db/connect');
 const port = process.env.PORT || 3000;
 const app = express();
 
-//const swaggerUi = require('swagger-ui-express');
-//const swaggerDocument = require('./swagger.json'); // won´t exist until created with <npm run swagger>
-
-
 // Create a route in your server that will return you the name of someone you know.
 // when the default page is hit, load the routes folder
 app
-//.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 .use(bodyParser.json()) // vs bodyParser.urlencoded({ extended: true })
 .use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*'); // CORS
@@ -36,7 +31,6 @@ app
 .use('/', require('./routes')); // goto routes
 
 // listen if connection is made
-//mongodb.initialDb((err, mongodb) => {
 mongodb.initDb((err, mongodb) => {
 
     // start server if db is connected

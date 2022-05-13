@@ -22,7 +22,7 @@
         }
       }
     },
-    "/api-docs/": {
+    "/api-docs": {
       "get": {
         "description": "",
         "parameters": [],
