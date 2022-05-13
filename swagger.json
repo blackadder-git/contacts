@@ -5,7 +5,7 @@
     "description": "Contact API",
     "version": "1.0.0"
   },
-  "host": "https://contacts-341.herokuapp.com",
+  "host": "contacts-341.herokuapp.com",
   "basePath": "/",
   "schemes": [
     "http"
