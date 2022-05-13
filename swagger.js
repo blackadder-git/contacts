@@ -6,7 +6,7 @@ const doc = {
     description: 'Contact API',
   },
   host: 'contacts-341.herokuapp.com',
-  schemes: ['http'],
+  schemes: ['https'],
 };
 
 const outputFile = './swagger.json';
