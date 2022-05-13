@@ -1,7 +1,8 @@
 const router = require('express').Router();
 
 // route any uri that begins with /api-docs to the swagger file
-router.use('/api-docs', require('./swagger')); // goto swagger.js
+router.use('/', require('./swagger')); // goto swagger.js
+//router.use('/api-docs', require('./swagger')); // goto swagger.js
 
 // route any uri that begins with /contacts to the contacts file
 router.use('/contacts', require('./contacts')); // goto contacts.js
