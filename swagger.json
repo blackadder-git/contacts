@@ -25,6 +25,9 @@
     "/api-docs": {
       "get": {
         "description": "",
+        "produces": [
+          "text/html"
+        ],        
         "parameters": [],
         "responses": {}
       }
