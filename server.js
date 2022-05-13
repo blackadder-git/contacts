@@ -23,12 +23,14 @@ app
 .use(bodyParser.json()) // vs bodyParser.urlencoded({ extended: true })
 .use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*'); // CORS
+    /*
     res.setHeader(
         'Access-Control-Allow-Headers',
         'Origin, X-Requested-With, Content-Type, Accept, Z-Key'
     );
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    */
     next();
 })
 .use('/', require('./routes')); // goto routes
