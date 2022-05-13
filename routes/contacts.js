@@ -1,6 +1,5 @@
 // routes in this file all being with /contacts
 const router = require('express').Router();
-
 const contactsController = require('../controllers/contacts');
 
 // prepend all routes here with /contacts/
