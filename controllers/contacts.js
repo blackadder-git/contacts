@@ -3,6 +3,10 @@ const ObjectId = require( 'mongodb' ).ObjectId;
 
 // GET
 const getAll = async ( req, res, next ) => {
+    /*
+    #swagger.description = 'Query the database and return all contacts'
+    */
+
     console.log( "Debug: getAll" );
 
     const result = await mongodb.getDb().db().collection( 'contacts' ).find();
@@ -15,6 +19,10 @@ const getAll = async ( req, res, next ) => {
 
 // GET
 const getSingle = async ( req, res, next ) => {
+    /*
+    #swagger.description = 'Query the database and return the contact with matching id'
+    */
+
     console.log( "Debug: getSingle" );
     const userId = new ObjectId(req.params.id);
     const result = await mongodb
@@ -30,6 +38,10 @@ const getSingle = async ( req, res, next ) => {
 
 // POST
 const createContact = async ( req, res, next ) => {
+    /*
+    #swagger.description = 'Create a new contact'
+    */
+
     console.log( "Debug: createContact" );
     console.log( req.body ); // made possible thanks to body-parser
 
@@ -79,6 +91,10 @@ const createContact = async ( req, res, next ) => {
 
 // PUT
 const updateContact = async ( req, res, next ) => {
+    /*
+    #swagger.description = 'Use id to update an existing contact'
+    */
+
     console.log( "Debug: updateContact" );
     
     const userId = req.params.id;
@@ -136,6 +152,10 @@ const updateContact = async ( req, res, next ) => {
 
 // DELETE
 const deleteContact = async ( req, res, next ) => {
+    /*
+    #swagger.description = 'Use id to delete contact from the database'
+    */
+
     console.log( "Debug: deleteContact" );
 
     const userId = req.params.id;

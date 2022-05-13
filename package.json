@@ -6,9 +6,12 @@
   "scripts": {
     "_comment1": "install nodemon for local use only with (npm install --save-dev nodemon) use Procfile to sort out on server",
     "_comment2": "in command prompt, type: npm run <e.g. start> to execute corresponding line",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "_comment_start": "start server, restart after any change",
     "start": "nodemon server.js",
-    "frog": "ribbit"
+    "_comment_swagger": "builds documentation",
+    "swagger": "node swagger.js",
+    "frog": "ribbit",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,9 +23,11 @@
     "body-parser": "^1.20.0",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "mongodb": "^4.5.0"
+    "mongodb": "^4.5.0",
+    "swagger-ui-express": "^4.3.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "swagger-autogen": "^2.21.1"
   }
 }

@@ -3,6 +3,8 @@ const router = require('express').Router();
 
 const contactsController = require('../controllers/contacts');
 
+// prepend all routes here with /contacts/
+
 // Create a GET request in your contacts route file that will return all of the documents in your contacts collection.
 router.get('/', contactsController.getAll); // contacts/
 
