@@ -5,6 +5,8 @@ const doc = {
     title: 'My API',
     description: 'Contact API',
   },
+  //host: 'localhost:3000',
+  //schemes: ['http'],
   host: 'contacts-341.herokuapp.com',
   schemes: ['https'],
 };
